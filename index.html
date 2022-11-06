@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- javascript -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <button id="newgame">NUOVA PARTITA</button>
+    <div id="countdown">
+        <div class="timerNum">Sei pronto?</div>
+    </div>
+    <div class="hands">
+        <img src="img/hand.png" class="hand lefthand">
+        <img src="img/hand.png" class="hand righthand">
+    </div>
+    <div class="five-numbers">
+        <span>Memorizza i numeri!</span>
+    </div>
+    <div class="guess-numbers hidden">
+        <input type="number" min="1" max="99" class="num-guess">
+        <input type="number" min="1" max="99" class="num-guess">
+        <input type="number" min="1" max="99" class="num-guess">
+        <input type="number" min="1" max="99" class="num-guess">
+        <input type="number" min="1" max="99" class="num-guess">
+        <button id="endgame">CONTROLLA</button>
+    </div>
+    <div class="risultati">
+
+    </div>
+
+</body>
+</html>
