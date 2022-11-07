@@ -11,8 +11,9 @@ const checkButton = document.getElementById('endgame');
 const results = document.querySelector('.risultati');
 let risultato = 0;
 
+let countdown;
+
 startButton.addEventListener('click', function(){
-    startButton.classList.add('hidden')
     guessNumSection.classList.add('hidden')
     leftHand.classList.remove('leftanimation')
     rightHand.classList.remove('rightanimation')
@@ -20,6 +21,10 @@ startButton.addEventListener('click', function(){
     randomNum = []
     guessNumList = [];
     risultato = 0;
+    let timerNum = 4;
+    countdownSection.innerHTML = `<div class="timerNum">${timerNum + 1}</div>`;
+
+    clearInterval(countdown);
 
     for(i=0; i<5; i++){
         guessNum[i].value = '';
@@ -27,8 +32,7 @@ startButton.addEventListener('click', function(){
         guessNum[i].classList.remove('wrong');
     }
 
-    let countdown = setInterval(timer, 1000);
-    let timerNum = 10;
+    countdown = setInterval(timer, 1000);
     function timer() {
         countdownSection.innerHTML = `<div class="timerNum">${timerNum}</div>`;
         timerNum--;
@@ -38,7 +42,6 @@ startButton.addEventListener('click', function(){
             for(i=0; i<5; i++){
                 guessNum[i].value = '';
             }
-            startButton.classList.remove('hidden')
             guessNumSection.classList.remove('hidden')
             leftHand.classList.add('leftanimation')
             rightHand.classList.add('rightanimation')
